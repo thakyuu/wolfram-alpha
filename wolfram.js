@@ -9,6 +9,7 @@ function Client(appKey, opts) {
   // Not all formats are supported yet. Needs work in pod mappers below.
   // http://products.wolframalpha.com/docs/WolframAlpha-API-Reference.pdf
   qp.format = 'plaintext,image';
+  qp.primary = true;
 
   Object.keys(opts || {}).forEach(function (key) {
     qp[key] = opts[key];
@@ -33,6 +34,7 @@ Client.prototype.query = function (input, cb, debug) {
     return;
   }
 
+  var usesPrimary = this.qp.primary;
   request(uri, function (error, response, body) {
     if (error || response.statusCode !== 200) {
       return cb(error, null);
@@ -48,15 +50,20 @@ Client.prototype.query = function (input, cb, debug) {
 
     var pods = root.find('pod').map(function (pod) {
       var subpods = pod.find('subpod').map(function (node) {
-        var obj = {};
-        obj.title = node.attr('title').value();
-        obj.value = node.get('plaintext').text();
+        var i = {};
+        i.title = node.attr('title').value();
+        i.value = node.get('plaintext').text();
         if (node.get('img')) { // if format does not include image, this isnt set
-          obj.image = node.get('img').attr('src').value();
+          i.image = node.get('img').attr('src').value();
         }
-        return obj;
+        return i;
       });
-      return { subpods: subpods };
+      var o = {};
+      o.subpods = subpods;
+      if (usesPrimary) {
+        o.primary = pod.attr('primary') && pod.attr('primary').value() === 'true';
+      }
+      return o;
     });
     cb(null, pods);
   });
