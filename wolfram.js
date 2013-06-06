@@ -15,7 +15,7 @@ function Client(appKey, opts) {
   });
 }
 
-Client.prototype.query = function (input, cb) {
+Client.prototype.query = function (input, cb, debug) {
   if(!this.qp.appid) {
     return cb(new Error("Application key not set"), null);
   }
@@ -28,7 +28,7 @@ Client.prototype.query = function (input, cb) {
   this.qp.input = input;
   var uri = 'http://api.wolframalpha.com/v2/query?' + qs.stringify(this.qp);
 
-  if (opts.debug) {
+  if (debug) {
     request(uri).pipe(process.stdout);
     return;
   }
