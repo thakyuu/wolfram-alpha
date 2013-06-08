@@ -1,12 +1,12 @@
 {
-  "author": "Sami Kukkonen <sami.matias.kukkonen@gmail.com>",
-  "name": "wolfram",
+  "author": "Eirik Albrigtsen <analsandblaster@gmail.com>",
+  "name": "wolfram-alpha",
   "description": "Wolfram Alpha API",
   "keywords": "wolfram alpha api wolframalpha",
-  "version": "0.2.6",
+  "version": "0.0.0",
   "repository": {
     "type": "git",
-    "url": "git://github.com/strax/wolfram.git"
+    "url": "git://github.com/strax/wolfram-alpha.git"
   },
   "scripts": {
     "test": "tap test/*.js"
