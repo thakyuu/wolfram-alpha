@@ -3,7 +3,7 @@
   "name": "wolfram-alpha",
   "description": "Wolfram Alpha API",
   "keywords": "wolfram alpha api wolframalpha",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "repository": {
     "type": "git",
     "url": "git://github.com/strax/wolfram-alpha.git"
