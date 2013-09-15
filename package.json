@@ -6,7 +6,7 @@
   "version": "0.1.0",
   "repository": {
     "type": "git",
-    "url": "git://github.com/strax/wolfram-alpha.git"
+    "url": "git://github.com/clux/wolfram-alpha.git"
   },
   "scripts": {
     "test": "tap test/*.js"
@@ -17,6 +17,6 @@
     "libxmljs": "~0.8.1"
   },
   "devDependencies": {
-    "tap": "~0.4.2"
+    "tap": "~0.4.4"
   }
 }
