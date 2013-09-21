@@ -2,8 +2,13 @@
   "author": "Eirik Albrigtsen <analsandblaster@gmail.com>",
   "name": "wolfram-alpha",
   "description": "Wolfram Alpha API",
-  "keywords": ["wolfram", "alpha", "api", "wolframalpha"],
-  "version": "0.1.0",
+  "keywords": [
+    "wolfram",
+    "alpha",
+    "api",
+    "wolframalpha"
+  ],
+  "version": "0.1.1",
   "repository": {
     "type": "git",
     "url": "clux/wolfram-alpha"
