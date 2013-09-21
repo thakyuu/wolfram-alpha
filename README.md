@@ -1,4 +1,4 @@
-# wolfram-alpha
+# wolfram-alpha [![Dependency Status](https://david-dm.org/clux/wolfram-alpha.png)](https://david-dm.org/clux/wolfram-alpha)
 This is a Wolfram|Alpha API wrapper for Node.js.
 
 All the query parameters are fully customizable as per the [API reference](http://products.wolframalpha.com/docs/WolframAlpha-API-Reference.pdf), and the normal `'plaintext,image,sound,mathml'` formats are all parsed properly.
