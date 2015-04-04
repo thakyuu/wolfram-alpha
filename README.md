@@ -1,6 +1,8 @@
 # wolfram-alpha
-[![Dependency Status](https://david-dm.org/clux/wolfram-alpha.png)](https://david-dm.org/clux/wolfram-alpha)
-[![unstable](http://hughsk.github.io/stability-badges/dist/unstable.svg)](http://nodejs.org/api/documentation.html#documentation_stability_index)
+[![npm status](http://img.shields.io/npm/v/wolfram-alpha.svg)](https://www.npmjs.org/package/wolfram-alpha)
+[![build status](https://secure.travis-ci.org/clux/wolfram-alpha.svg)](http://travis-ci.org/clux/wolfram-alpha)
+[![dependency status](https://david-dm.org/clux/wolfram-alpha.svg)](https://david-dm.org/clux/wolfram-alpha)
+[![coverage status](http://img.shields.io/coveralls/clux/wolfram-alpha.svg)](https://coveralls.io/r/clux/wolfram-alpha)
 
 This is a Wolfram|Alpha API wrapper for Node.js.
 
@@ -10,16 +12,16 @@ All the query parameters are fully customizable as per the [API reference](http:
 ## Usage
 Register for an application ID in the [Wolfram|Alpha developer website](http://products.wolframalpha.com/developers/).
 
-Install the module with npm, and install the libxml dependency in your OS first:
+Install the module with npm, and (possibly) install the libxml dependency in your OS first:
 
-```bash
+```sh
 $ sudo apt-get install libxml2-dev
 $ npm install wolfram-alpha
 ```
 
 Example usage:
 
-```javascript
+```js
 var wolfram = require('wolfram-alpha').createClient("APIKEY-HERE", opts);
 
 wolfram.query("integrate 2x", function (err, result) {
@@ -69,4 +71,3 @@ $ npm test
 
 ## License
 MIT-Licensed. See LICENSE file for details.
-Based on Sami Kukkonen's [original wrapper](https://github.com/strax/wolfram), see this repository for previous licensing.
