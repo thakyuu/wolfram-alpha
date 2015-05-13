@@ -21,7 +21,7 @@
   },
   "main": "wolfram.js",
   "dependencies": {
-    "libxmljs": "^0.13.0",
+    "libxmljs": "^0.14.1",
     "request": "^2.54.0"
   },
   "devDependencies": {
