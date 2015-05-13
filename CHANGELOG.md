@@ -1,3 +1,7 @@
+0.2.1 / 2015-05-13
+==================
+  * Upgrade libxmljs to 0.14.1 to fix iojs 2.X build
+
 0.2.0 / 2015-04-04
 ==================
   * Upgrade libxmljs to 0.13.0
