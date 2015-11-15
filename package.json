@@ -16,8 +16,7 @@
   "scripts": {
     "test": "nodeunit --reporter=verbose test/*.test.js",
     "precoverage": "jscoverage wolfram.js",
-    "coverage": "WOLFRAM_COV=1 nodeunit --reporter=lcov test/*.test.js",
-    "coveralls": "npm run coverage | coveralls"
+    "coverage": "WOLFRAM_COV=1 nodeunit --reporter=lcov test/*.test.js"
   },
   "main": "wolfram.js",
   "dependencies": {
@@ -25,7 +24,6 @@
     "request": "^2.54.0"
   },
   "devDependencies": {
-    "coveralls": "^2.11.2",
     "jscoverage": "^0.5.9",
     "nodeunit": "^0.9.1"
   }
