@@ -9,7 +9,7 @@ This is a Wolfram|Alpha API wrapper for Node.js.
 All the query parameters are fully customizable as per the [API reference](http://products.wolframalpha.com/docs/WolframAlpha-API-Reference.pdf), and the normal `'plaintext,image,sound,mathml'` formats are all parsed properly.
 
 ## Usage
-Register for an application ID in the [Wolfram|Alpha developer website](http://products.wolframalpha.com/developers/).
+Register for a Wolfram|Alpha application ID. The Wolfram|Alpha® API is available for free for non-commercial experimental use with a low monthly cap on queries.  For more information, visit [http://products.wolframalpha.com/developers/](http://products.wolframalpha.com/developers/). Wolfram is a registered trademark of the Wolfram Group of Companies.
 
 Install the module with npm, and (possibly) install the libxml dependency in your OS first:
 
