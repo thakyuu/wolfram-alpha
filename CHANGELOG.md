@@ -1,3 +1,9 @@
+0.6.0 / 2017-04-16
+==================
+  * bump all dependencies to tip
+  * *BREAKING* `client.query` now returns a promise
+  * Old functionality temporarily available under `client.queryCb`.
+
 0.5.0 / 2016-05-23
 ==================
   * upgrade libxmljs to 0.18.0

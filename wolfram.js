@@ -24,7 +24,19 @@ function Client(appKey, opts) {
   qp.appid = appKey;
 }
 
-Client.prototype.query = function (input, cb, debug) {
+Client.prototype.query = function (input, debug) {
+  return new Promise((resolve, reject) => {
+    this.queryCb(input, function (err, res) {
+      if (err) {
+        reject(err);
+      } else {
+        resolve(res);
+      }
+    }, debug);
+  });
+}
+
+Client.prototype.queryCb = function (input, cb, debug) {
   var qp = this.qp;
 
   if(!qp.appid) {

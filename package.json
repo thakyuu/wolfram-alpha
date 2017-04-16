@@ -14,17 +14,17 @@
     "url": "clux/wolfram-alpha"
   },
   "scripts": {
-    "test": "nodeunit --reporter=verbose test/*.test.js",
-    "precoverage": "jscoverage wolfram.js",
-    "coverage": "WOLFRAM_COV=1 nodeunit --reporter=lcov test/*.test.js"
+    "test": "bndg test/*.test.js",
+    "precoverage": "istanbul cover bndg test/*.test.js",
+    "coverage": "cat coverage/lcov.info && rm -rf coverage"
   },
   "main": "wolfram.js",
   "dependencies": {
-    "libxmljs": "^0.18.0",
-    "request": "^2.54.0"
+    "libxmljs": "^0.18.4",
+    "request": "^2.81.0"
   },
   "devDependencies": {
-    "jscoverage": "^0.5.9",
-    "nodeunit": "^0.9.1"
+    "bandage": "^0.5.0",
+    "istanbul": "^0.4.5"
   }
 }

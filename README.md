@@ -23,10 +23,8 @@ Example usage:
 ```js
 var wolfram = require('wolfram-alpha').createClient("APIKEY-HERE", opts);
 
-wolfram.query("integrate 2x", function (err, result) {
-  if (err) throw err;
-  console.log("Result: %j", result);
-});
+var results = yield wolfram.query("integrate 2x")
+console.log("Result: %j", results);
 ```
 
 ## Output

@@ -12,8 +12,8 @@ addons:
     - g++-4.8
 
 node_js:
-  - 0.10
   - 4
+  - 6
   - node
 
 notifications:
